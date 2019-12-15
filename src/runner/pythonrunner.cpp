@@ -1351,6 +1351,7 @@ bool PythonRunner::initPython(const QString &pythonPath)
     Py_OptimizeFlag = 2;
     Py_NoSiteFlag = 1;
     initPath();
+    PySys_AddXOption(L"uft8");
     Py_InitializeEx(0);
 
     if (!Py_IsInitialized()) {
